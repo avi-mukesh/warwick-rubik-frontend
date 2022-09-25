@@ -33,7 +33,7 @@ const Exec = () => {
                             <Col
                                 lg={4}
                                 sm={12}
-                                className="text-center m-lg-0 m-sm-2"
+                                className="text-center m-lg-0 m-2"
                                 key={execMember.name}
                             >
                                 <ExecCard

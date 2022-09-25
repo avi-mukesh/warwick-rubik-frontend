@@ -1,7 +1,6 @@
 import React from "react"
 import useTitle from "../hooks/useTitle"
-import EventTimeLine from "./EventTimeLine"
-import "react-calendar/dist/Calendar.css"
+import EventTimeLine from "../features/events/EventTimeLine"
 import BackgroundImage from "./BackgroundImage"
 import Header from "./Header"
 import Container from "react-bootstrap/Container"

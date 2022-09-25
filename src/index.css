@@ -23,9 +23,13 @@ main {
 }
 
 @media screen and (max-width:768px) {
+    section {
+      margin: 1rem 5px;
+    }
+
     .bg {
       text-align: center;
-      height: 30vh;
+      height: 40vh;
     }
 
 
@@ -37,7 +41,7 @@ main {
       border: none;    
     }
 
-    .event-list > p{ 
-      margin-bottom: 3px;    
+    p{ 
+      margin-bottom: 3px!important;    
     }
 }

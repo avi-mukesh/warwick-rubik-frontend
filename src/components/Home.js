@@ -8,6 +8,8 @@ import BackgroundImage from "./BackgroundImage"
 import Header from "./Header"
 import MiniCompLeaderboard from "./MiniCompLeaderboard"
 
+import { useMediaQuery } from "react-responsive"
+
 const Home = () => {
     useTitle("Home")
     return (
@@ -53,6 +55,9 @@ const Home = () => {
 }
 
 const SocietyNews = () => {
+    const medium = useMediaQuery({
+        query: "(min-width: 768px)",
+    })
     return (
         <section className="container">
             <h3 className="display-6">Latest society news</h3>
@@ -61,7 +66,9 @@ const SocietyNews = () => {
                 <FontAwesomeIcon icon="newspaper" />
             </p>
 
-            <article className="list-group flex-md-row flex-column">
+            <article
+                className={`list-group ${medium && "list-group-horizontal"}`}
+            >
                 <SocietyNewsExcerpt />
                 <SocietyNewsExcerpt />
                 <SocietyNewsExcerpt />
