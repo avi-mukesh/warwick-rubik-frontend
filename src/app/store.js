@@ -7,6 +7,8 @@ export const store = configureStore({
         // Add the generated reducer as a specific top-level slice
         [apiSlice.reducerPath]: apiSlice.reducer,
     },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(apiSlice.middleware),
 })
 
 // setupListeners is a utility to enable refetchOnMount and refetchOnReconnect behaviours

@@ -18,6 +18,7 @@ import {
     faNewspaper,
     faTrophy,
     faCalendarDay,
+    faSadCry,
 } from "@fortawesome/free-solid-svg-icons"
 
 library.add(
@@ -28,7 +29,8 @@ library.add(
     faPeopleGroup,
     faNewspaper,
     faTrophy,
-    faCalendarDay
+    faCalendarDay,
+    faSadCry
 )
 
 const root = ReactDOM.createRoot(document.getElementById("root"))

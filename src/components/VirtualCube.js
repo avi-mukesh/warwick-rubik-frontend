@@ -1,7 +1,12 @@
 import React from "react"
+import Header from "./Header"
 
 const VirtualCube = () => {
-    return <div>VirtualCube</div>
+    return (
+        <Header title="Haha">
+            <p className="lead">Nothing to see here. Move along.</p>
+        </Header>
+    )
 }
 
 export default VirtualCube

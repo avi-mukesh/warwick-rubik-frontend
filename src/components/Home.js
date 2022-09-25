@@ -6,9 +6,9 @@ import useTitle from "../hooks/useTitle"
 import bgImg from "../images/bg.webp"
 import BackgroundImage from "./BackgroundImage"
 import Header from "./Header"
-import MiniCompLeaderboard from "./MiniCompLeaderboard"
 
-import { useMediaQuery } from "react-responsive"
+import MiniCompLeaderboard from "../features/leaderboard/MiniCompLeaderboard"
+import SocietyNews from "../features/news/SocietyNews"
 
 const Home = () => {
     useTitle("Home")
@@ -41,59 +41,16 @@ const Home = () => {
                     </p>
                 </section>
                 <Row className="m-4">
-                    <Col lg={6} md={12}>
+                    <Col xxl={6} lg={12}>
                         <SocietyNews />
                     </Col>
-                    <Col lg={6} md={12}>
+                    <Col xxl={6} lg={12}>
                         <MiniCompLeaderboard />
                     </Col>
                 </Row>
                 {/* <InstagramPosts /> */}
             </main>
         </>
-    )
-}
-
-const SocietyNews = () => {
-    const medium = useMediaQuery({
-        query: "(min-width: 768px)",
-    })
-    return (
-        <section className="container">
-            <h3 className="display-6">Latest society news</h3>
-            <p className="lead">
-                Your fix for everything Warwick Rubik{" "}
-                <FontAwesomeIcon icon="newspaper" />
-            </p>
-
-            <article
-                className={`list-group ${medium && "list-group-horizontal"}`}
-            >
-                <SocietyNewsExcerpt />
-                <SocietyNewsExcerpt />
-                <SocietyNewsExcerpt />
-            </article>
-        </section>
-    )
-}
-
-const SocietyNewsExcerpt = ({ active }) => {
-    return (
-        <a
-            href="#home"
-            className={`list-group-item list-group-item-action flex-column align-items-start ${
-                active && "active"
-            }`}
-        >
-            <div className="d-flex w-100 justify-content-between">
-                <h5 className="mb-1">List group item heading</h5>
-                <small>3 days ago</small>
-            </div>
-            <p className="mb-1">
-                Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                diam eget risus varius blandit.
-            </p>
-        </a>
     )
 }
 
