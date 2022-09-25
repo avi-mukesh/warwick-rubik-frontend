@@ -3,3 +3,41 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+main {
+  text-align: center;
+}
+
+.bg {
+  height: 50vh;
+}
+
+.event-list {
+  border-top: 2px solid #e9ecef;
+}
+.event-list:before {
+  content: "";
+  height: 36px;
+  border-right: 2px dashed #dee2e6;
+  top: 0;
+}
+
+@media screen and (max-width:768px) {
+    .bg {
+      text-align: center;
+      height: 30vh;
+    }
+
+
+    .events {
+      border-top: 2px solid #e9ecef;
+    }
+
+    .event-list { 
+      border: none;    
+    }
+
+    .event-list > p{ 
+      margin-bottom: 3px;    
+    }
+}

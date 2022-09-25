@@ -1,7 +1,6 @@
 import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
-import NavDropdown from "react-bootstrap/NavDropdown"
 
 import logo from "../images/logo.png"
 
@@ -24,6 +23,7 @@ const PageNavbar = () => {
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/events">Events</Nav.Link>
                         <Nav.Link href="/exec">Exec</Nav.Link>
+                        <Nav.Link href="/virtual-cube">Virtual Cube</Nav.Link>
                         <Nav.Link
                             href="https://www.warwicksu.com/societies-sports/societies/59946/"
                             target="_blank"

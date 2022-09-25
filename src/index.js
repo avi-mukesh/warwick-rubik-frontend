@@ -7,7 +7,26 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
-library.add(fab)
+import {
+    faFaceSmile,
+    faChampagneGlasses,
+    faEnvelope,
+    faPeopleGroup,
+    faNewspaper,
+    faTrophy,
+    faCalendarDay,
+} from "@fortawesome/free-solid-svg-icons"
+
+library.add(
+    fab,
+    faFaceSmile,
+    faChampagneGlasses,
+    faEnvelope,
+    faPeopleGroup,
+    faNewspaper,
+    faTrophy,
+    faCalendarDay
+)
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(

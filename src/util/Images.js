@@ -15,9 +15,9 @@ function importAll(r) {
     return images
 }
 const execImagePaths = importAll(
-    require.context("../images/exec", false, /\.(jpg)$/)
+    require.context("../images/exec", false, /\.(webp)$/)
 )
 
 export const execImages = new Array(execImageAlts.length)
     .fill(0)
-    .map((_, i) => new execImage(execImagePaths[`${i}.jpg`], execImageAlts[i]))
+    .map((_, i) => new execImage(execImagePaths[`${i}.webp`], execImageAlts[i]))

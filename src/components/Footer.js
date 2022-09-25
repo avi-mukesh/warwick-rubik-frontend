@@ -4,9 +4,9 @@ import FooterLink from "./FooterLink"
 
 const Footer = () => {
     return (
-        <footer class="bg-dark text-center text-white">
+        <footer className="bg-dark text-center text-white">
             <Container className="p-2">
-                <section class="mb-3">
+                <section className="mb-3">
                     <FooterLink
                         to="https://www.instagram.com/warwickrubik/"
                         brand="instagram"
@@ -19,17 +19,21 @@ const Footer = () => {
                         to="https://www.instagram.com/warwickrubik/"
                         brand="discord"
                     />
+                    <FooterLink
+                        to="mailto:warwickrubikscube@gmail.com"
+                        icon="envelope"
+                    />
                 </section>
-                <section class="mb-3">
+                <section>
                     <p>Keep cubing.</p>
                 </section>
             </Container>
 
             <div
-                class="text-center p-1"
+                className="text-center p-1 w-100"
                 style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
             >
-                <p class="text-white">
+                <p className="text-white">
                     © 2022 Copyright: Warwick Rubik's Cube Society
                 </p>
             </div>
