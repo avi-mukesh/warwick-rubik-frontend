@@ -13,12 +13,12 @@ const SocietyNewsExcerpt = ({ newsId }) => {
         addSuffix: true,
     })
 
-    const { bgColor, textColor } = useTheme()
+    const { bgColor } = useTheme()
 
     return (
         <a
             href={`/news/${news.id}`}
-            className={`list-group-item list-group-item-action flex-column align-items-start bg-${bgColor} text-${textColor}`}
+            className={`list-group-item list-group-item-action list-group-item-${bgColor}`}
         >
             <div className="d-flex w-100 justify-content-between">
                 <h5 className="mb-1">{news.title}</h5>

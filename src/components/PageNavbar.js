@@ -16,7 +16,7 @@ const PageNavbar = () => {
     return (
         <Navbar bg={bgColor} variant={bgColor} expand="lg">
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/home">
                     <img
                         alt="Brev"
                         src={logo}
@@ -38,8 +38,10 @@ const PageNavbar = () => {
                         >
                             SU page
                         </Nav.Link>
+                    </Nav>
+                    <Nav>
                         <button
-                            className={`btn btn-outline-${textColor}`}
+                            className={`btn btn-nav btn-outline-${textColor}`}
                             onClick={toggleTheme}
                         >
                             Switch to {isDarkTheme ? "light" : "dark"} mode
