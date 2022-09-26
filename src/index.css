@@ -2,10 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 
 main {
   text-align: center;
+  position: relative;
+  padding: 4px;
+}
+
+section {
+  margin: 0.5rem;
+  /* margin-top: 2px; */
 }
 
 .bg {
@@ -44,4 +53,11 @@ main {
     p{ 
       margin-bottom: 3px!important;    
     }
+}
+
+@media screen and (max-height: 576px) {
+  .bg {
+    height: 100vh;
+  }
+  
 }

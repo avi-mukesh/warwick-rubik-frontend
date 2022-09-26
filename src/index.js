@@ -5,43 +5,21 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import App from "./App"
 import { store } from "./app/store"
 import { Provider } from "react-redux"
+import ThemeProvider from "./contexts/ThemeContext"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-import {
-    faFaceSmile,
-    faChampagneGlasses,
-    faEnvelope,
-    faPeopleGroup,
-    faNewspaper,
-    faTrophy,
-    faCalendarDay,
-    faSadCry,
-} from "@fortawesome/free-solid-svg-icons"
-
-library.add(
-    fab,
-    faFaceSmile,
-    faChampagneGlasses,
-    faEnvelope,
-    faPeopleGroup,
-    faNewspaper,
-    faTrophy,
-    faCalendarDay,
-    faSadCry
-)
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            <Router>
-                <Routes>
-                    <Route path="/*" element={<App />} />
-                </Routes>
-            </Router>
+            <ThemeProvider>
+                <Router>
+                    <Routes>
+                        <Route path="/*" element={<App />} />
+                    </Routes>
+                </Router>
+            </ThemeProvider>
         </Provider>
     </React.StrictMode>
 )

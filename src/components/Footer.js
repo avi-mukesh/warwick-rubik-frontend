@@ -4,7 +4,7 @@ import FooterLink from "./FooterLink"
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-center text-white">
+        <footer className="bg-dark text-center text-light">
             <Container className="p-2">
                 <section className="mb-3">
                     <FooterLink

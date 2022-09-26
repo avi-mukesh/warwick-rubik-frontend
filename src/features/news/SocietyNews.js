@@ -26,7 +26,8 @@ const SocietyNews = () => {
     } else if (isSuccess) {
         const { ids } = news
         newsItems =
-            ids?.length && ids.map((id) => <SocietyNewsExcerpt key={id} newsId={id} />)
+            ids?.length &&
+            ids.map((id) => <SocietyNewsExcerpt key={id} newsId={id} />)
     } else if (isError) {
         newsItems = <p>{error}</p>
     }

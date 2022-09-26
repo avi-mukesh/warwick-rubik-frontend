@@ -14,7 +14,7 @@ const BackgroundImage = ({ img = bgImg, children }) => {
             <div
                 className="mask h-100 text-light d-flex align-items-center"
                 style={{
-                    backgroundColor: "rgba(0, 0, 0, 0.7)",
+                    backgroundColor: "rgba(0, 0, 0, 0.6)",
                 }}
             >
                 {children}

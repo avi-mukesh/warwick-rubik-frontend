@@ -7,8 +7,8 @@ import useTitle from "../../hooks/useTitle"
 import { execMembers } from "../../util/Exec"
 import BackgroundImage from "../../components/BackgroundImage"
 import Header from "../../components/Header"
-import Card from "react-bootstrap/Card"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import ExecCard from "./ExecCard"
 
 const Exec = () => {
     useTitle("Exec")
@@ -48,24 +48,5 @@ const Exec = () => {
         </>
     )
 }
-const ExecCard = ({ exec }) => {
-    return (
-        <Card variant="dark" bg="dark" className="m-auto text-light">
-            <Card.Img variant="top" src={exec.img.src} />
-            <Card.Body>
-                <Card.Title>
-                    {exec.name}, {exec.role}
-                </Card.Title>
-                <Card.Text>{exec.description}</Card.Text>
-            </Card.Body>
-            <Card.Footer>
-                <Card.Text>
-                    <a className="nav-link" href={`mailto:${exec.email}`}>
-                        {exec.email}
-                    </a>
-                </Card.Text>
-            </Card.Footer>
-        </Card>
-    )
-}
+
 export default Exec

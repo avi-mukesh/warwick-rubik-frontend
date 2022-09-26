@@ -5,8 +5,10 @@ import Home from "./components/Home"
 import Layout from "./components/Layout"
 import VirtualCube from "./components/VirtualCube"
 import NotFound from "./components/NotFound"
+import { useFontAwesome } from "./hooks/useFontAwesome"
 
 const App = () => {
+    useFontAwesome()
     return (
         <Routes>
             <Route path="/" element={<Layout />}>

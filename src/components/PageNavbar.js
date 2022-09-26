@@ -1,12 +1,20 @@
+import { useEffect } from "react"
 import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
+import { useTheme } from "../hooks/useTheme"
 
 import logo from "../images/logo.png"
 
 const PageNavbar = () => {
+    const { isDarkTheme, toggleTheme, bgColor, textColor } = useTheme()
+
+    useEffect(() => {
+        console.log("theme changed")
+    }, [isDarkTheme])
+
     return (
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar bg={bgColor} variant={bgColor} expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
                     <img
@@ -30,6 +38,12 @@ const PageNavbar = () => {
                         >
                             SU page
                         </Nav.Link>
+                        <button
+                            className={`btn btn-outline-${textColor}`}
+                            onClick={toggleTheme}
+                        >
+                            Switch to {isDarkTheme ? "light" : "dark"} mode
+                        </button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

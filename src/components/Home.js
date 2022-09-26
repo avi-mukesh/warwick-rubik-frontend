@@ -24,7 +24,7 @@ const Home = () => {
                 </Header>
             </BackgroundImage>
 
-            <main>
+            <main >
                 <section>
                     <h2 className="display-4">Welcome Freshers!</h2>
                     <p className="lead">

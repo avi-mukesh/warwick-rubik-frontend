@@ -1,8 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
 import Table from "react-bootstrap/Table"
+import { useTheme } from "../../hooks/useTheme"
 
 const MiniCompLeaderboard = () => {
+    const { bgColor } = useTheme()
     return (
         <section className="container">
             <h3 className="display-6">Previous minicomp results</h3>
@@ -12,7 +14,7 @@ const MiniCompLeaderboard = () => {
                 see when the next minicomp is.
             </p>
 
-            <Table striped bordered hover variant="dark">
+            <Table striped bordered hover variant={bgColor}>
                 <thead>
                     <tr>
                         <th>#</th>
