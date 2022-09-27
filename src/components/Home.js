@@ -7,8 +7,9 @@ import bgImg from "../images/bg.webp"
 import BackgroundImage from "./BackgroundImage"
 import Header from "./Header"
 
-import MiniCompLeaderboard from "../features/leaderboard/MiniCompLeaderboard"
+import MiniCompLeaderboard from "../features/minicomp/MiniCompLeaderboard"
 import SocietyNews from "../features/news/SocietyNews"
+import ErrorBoundary from "./ErrorBoundary"
 
 const Home = () => {
     useTitle("Home")
@@ -24,7 +25,7 @@ const Home = () => {
                 </Header>
             </BackgroundImage>
 
-            <main >
+            <main>
                 <section>
                     <h2 className="display-4">Welcome Freshers!</h2>
                     <p className="lead">
@@ -42,20 +43,17 @@ const Home = () => {
                 </section>
                 <Row className="m-4">
                     <Col xxl={6} lg={12}>
-                        <SocietyNews />
+                        <ErrorBoundary>
+                            <SocietyNews />
+                        </ErrorBoundary>
                     </Col>
                     <Col xxl={6} lg={12}>
                         <MiniCompLeaderboard />
                     </Col>
                 </Row>
-                {/* <InstagramPosts /> */}
             </main>
         </>
     )
-}
-
-const InstagramPosts = () => {
-    return <InstagramPosts />
 }
 
 export default Home

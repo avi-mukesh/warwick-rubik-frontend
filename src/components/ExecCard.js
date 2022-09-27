@@ -1,5 +1,5 @@
 import Card from "react-bootstrap/Card"
-import { useTheme } from "../../hooks/useTheme"
+import { useTheme } from "../hooks/useTheme"
 
 const ExecCard = ({ exec }) => {
     const { bgColor, textColor } = useTheme()

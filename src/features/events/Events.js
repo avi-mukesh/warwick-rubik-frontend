@@ -6,6 +6,7 @@ import Header from "../../components/Header"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import ErrorBoundary from "../../components/ErrorBoundary"
 
 const Events = () => {
     useTitle("Events")
@@ -27,7 +28,9 @@ const Events = () => {
                 <section>
                     <Container>
                         <Row className="m-4">
-                            <EventTimeLine />
+                            <ErrorBoundary>
+                                <EventTimeLine />
+                            </ErrorBoundary>
                         </Row>
                     </Container>
                 </section>

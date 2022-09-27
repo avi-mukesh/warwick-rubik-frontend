@@ -29,7 +29,7 @@ const SocietyNews = () => {
             ids?.length &&
             ids.map((id) => <SocietyNewsExcerpt key={id} newsId={id} />)
     } else if (isError) {
-        newsItems = <p>{error}</p>
+        throw error.error
     }
 
     return (
@@ -39,7 +39,6 @@ const SocietyNews = () => {
                 Your fix for everything Warwick Rubik{" "}
                 <FontAwesomeIcon icon="newspaper" />
             </p>
-
             <article
                 className={`list-group ${medium && "list-group-horizontal"}`}
             >

@@ -9,6 +9,7 @@ const FooterLink = ({ to, brand, icon }) => {
             className="btn btn-outline-light btn-large m-1"
             href={to}
             role="button"
+            target="blank"
         >
             <FontAwesomeIcon icon={theIcon}></FontAwesomeIcon>
         </a>

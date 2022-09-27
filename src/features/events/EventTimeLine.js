@@ -29,7 +29,7 @@ const EventTimeLine = () => {
                 </Col>
             ))
     } else if (isError) {
-        eventItems = <p>{error}</p>
+        throw error.error
     }
     return (
         <>

@@ -12,11 +12,11 @@ const Footer = () => {
                         brand="instagram"
                     />
                     <FooterLink
-                        to="https://www.instagram.com/warwickrubik/"
+                        to="https://chat.whatsapp.com/CGqqQTSlbS1KiGOb9bFUDj"
                         brand="whatsapp"
                     />
                     <FooterLink
-                        to="https://www.instagram.com/warwickrubik/"
+                        to="https://discord.gg/EeBMnADW"
                         brand="discord"
                     />
                     <FooterLink
