@@ -1,10 +1,13 @@
 import React from "react"
 import Container from "react-bootstrap/Container"
+import { useTheme } from "../hooks/useTheme"
 import FooterLink from "./FooterLink"
 
 const Footer = () => {
+    const { bgColor, textColor } = useTheme()
+
     return (
-        <footer className="bg-dark text-center text-light">
+        <footer className={`bg-${textColor} text-center text-${bgColor}`}>
             <Container className="p-2">
                 <section className="mb-3">
                     <FooterLink
@@ -33,7 +36,7 @@ const Footer = () => {
                 className="text-center p-1 w-100"
                 style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
             >
-                <p className="text-white">
+                <p className={`text-${bgColor}`}>
                     © 2022 Copyright: Warwick Rubik's Cube Society
                 </p>
             </div>
